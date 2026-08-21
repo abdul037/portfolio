@@ -179,6 +179,8 @@ These are the only places the implementation differs from the handoff, and why:
 
 ## Deploying
 
+Step-by-step Vercel instructions are in [`DEPLOY.md`](./DEPLOY.md).
+
 The app is a static-friendly Next build and runs with no required env vars, but
 two optional ones control indexing and absolute URLs:
 
