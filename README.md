@@ -215,13 +215,21 @@ Two of these are decisions, not code — they need Abdul's input:
 - **Confidentiality review — the one gate on a *public* deploy.** The content
   carries real employer/authority names, ~30 real operational metrics, and 85
   product screenshots.
-  - **Done:** **all 85 screenshots are blurred in the image files themselves**
-    (`scripts/redact-screenshots.py`), so the sharp originals never ship.
-    Layout and colour still read; text, names, addresses and numbers do not.
-    This covers the sensitive real-data screens (`fero/` customer master,
-    address verification, control-tower routes, user access, live dashboards;
-    `execintel/`; `scmhub/`) and the rest (`itemcode/`, `tharwa/`, all
-    `deepdive/*` case studies).
+    Redaction is baked into the image files (never a CSS blur), so no sharp
+    original ships. Two techniques, chosen per screen:
+  - **Region-blur (13 `fero/` screens)** — only the PII / project / site
+    columns are blurred, leaving the rest of the UI sharp
+    (`scripts/redact-regions.py`, driven by `scripts/redactions.json`). Masked:
+    customer names, addresses, coordinates, contact numbers, driver names,
+    user names/emails, depot/site names, project names/IDs, and the Depots
+    directory. Kept sharp: order/asset codes, statuses, distances, aggregate
+    KPI dashboards, and all chrome — so the screens still read as a real product.
+  - **Full-blur (`scmhub/` 6, `execintel/` 4)** — these internal PM/intel tools
+    are wall-to-wall project and owner names, so the whole image is blurred
+    (`scripts/redact-screenshots.py`).
+  - **Left sharp:** the fero aggregate dashboards (no PII), `itemcode/`
+    (diagrams), `tharwa/` (personal venture, sample data), and all `deepdive/*`
+    case studies (concepts/teardowns).
   - **Still open:** the real *metrics and names* in `src/data/` are untouched
     (standard on a resume, but tell me if any should be generalised).
   - **⚠ git history:** the sharp originals were committed before redaction, so
