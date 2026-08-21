@@ -212,11 +212,23 @@ Two of these are decisions, not code — they need Abdul's input:
 
 - **Confidentiality review — the one gate on a *public* deploy.** The content
   carries real employer/authority names, ~30 real operational metrics, and 85
-  internal product screenshots. Nothing is redacted. Indexing is off by default
-  (above) so the site is not discoverable until this is settled. **To redact:
-  tell me which specific screenshots, numbers, or names to remove** and I'll do
-  exactly that — the screenshots live in `public/assets/`, and copy/metrics are
-  in `src/data/`.
+  product screenshots.
+  - **Done:** the 34 screenshots holding real internal Gulf Cryo data —
+    `fero/` (customer master, address verification, control-tower routes, user
+    access, live dashboards), `execintel/`, and `scmhub/` — are **blurred in
+    the image files themselves** (`scripts/redact-screenshots.py`), so the
+    sharp originals never ship. Layout and colour still read; text and numbers
+    do not.
+  - **Left sharp on purpose:** `itemcode/` (structural diagrams), `tharwa/`
+    (personal venture, sample data), and the `deepdive/*` case studies
+    (concepts/teardowns per the handoff). Say the word to blur any of these too.
+  - **Still open:** the real *metrics and names* in `src/data/` are untouched
+    (standard on a resume, but tell me if any should be generalised).
+  - **⚠ git history:** the sharp originals were committed before redaction, so
+    they remain retrievable from earlier commits. If the repo is or becomes
+    public, purge them with `git filter-repo` before publishing — the working
+    tree and the deployed site are already clean.
+  - Indexing stays off by default (above) until you confirm the review is done.
 - **Screenshots pending.** Some catalog entries and category tiles have no
   screenshot and render a labelled placeholder. The handoff's changelog lists
   these as known and accepted; supply the images to fill them.
