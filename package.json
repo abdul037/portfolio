@@ -1,0 +1,29 @@
+{
+  "name": "abdul-muwahib-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Abdul Muwahib \u2014 AI Product Manager portfolio",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src scripts smoke.mjs",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node smoke.mjs",
+    "check:responsive": "node scripts/responsive-check.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.1",
+    "playwright": "^1.62.1",
+    "typescript": "5.7.2"
+  }
+}

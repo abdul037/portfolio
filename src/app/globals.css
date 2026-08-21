@@ -1,0 +1,198 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Design tokens + global chrome.
+   Ported verbatim from the handoff prototype's <style> block so the runtime
+   accent theming (--a / --aRGB) and every keyframe keep their exact values.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Accent — re-themeable at runtime; every accent reference reads var(--a). */
+  --a: #34d399;
+  --aRGB: 52, 211, 153;
+
+  /* Canvas & surfaces */
+  --canvas: #07070e;
+  --surface-raise: #0b0b12;
+  --surface-card: #0c0c14;
+
+  /* Text */
+  --text: #e0e0e6;
+  --text-bright: #f0f0f4;
+  --text-muted: #6b6b76;
+  --text-dim: #8a8a95;
+
+  /* Secondary data accents */
+  --cyan: #22d3ee;
+  --violet: #a78bfa;
+  --pink: #f472b6;
+  --amber: #fbbf24;
+  --rose: #fb7185;
+  --deepdive: #60a5fa;
+
+  --hairline: rgba(255, 255, 255, 0.04);
+
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #07070e;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a46 #0b0b12;
+}
+
+body {
+  margin: 0;
+  background: #07070e;
+  color: #e0e0e6;
+  font-family: var(--font-display);
+}
+
+a { color: #e0e0e6; text-decoration: none; }
+a:hover { color: #34d399; }
+::selection { background: rgba(52, 211, 153, 0.3); color: #fff; }
+
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: #0b0b12; }
+::-webkit-scrollbar-thumb { background: #33333f; border-radius: 8px; border: 3px solid #0b0b12; }
+::-webkit-scrollbar-thumb:hover { background: #454553; }
+
+/* ── Keyframes ─────────────────────────────────────────────────────────── */
+@keyframes pulseDot { 0%, 100% { opacity: 1; box-shadow: 0 0 8px #34d399; } 50% { opacity: 0.3; box-shadow: 0 0 2px #34d399; } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes scanH { 0% { transform: translateX(-100%); } 100% { transform: translateX(400%); } }
+@keyframes breathe { 0%, 100% { transform: scale(1) translateZ(0); } 50% { transform: scale(1.004) translateZ(0); } }
+@keyframes tagFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+@keyframes rippleOut { 0% { transform: scale(0); opacity: 0.35; } 100% { transform: scale(4); opacity: 0; } }
+@keyframes crtScan { 0% { top: -2px; } 100% { top: 100vh; } }
+@keyframes modalSlide { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+@keyframes borderPulse { 0%, 100% { border-color: rgba(52, 211, 153, 0.15); } 50% { border-color: rgba(52, 211, 153, 0.4); } }
+
+/* ── Scroll reveal + animated bars ─────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-reveal].on { opacity: 1; transform: none; filter: none; }
+[data-bar] { width: 0; transition: width 1.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .hero-grid > div:last-child { display: none; }
+}
+
+.nav-hamburger { display: none; }
+
+/*
+ * Grid collapse.
+ *
+ * The prototype matched grids by inline-style substring with a space after the
+ * colon ("grid-template-columns: 1fr 1fr"). React serialises inline styles
+ * without that space, so those selectors silently matched nothing and the
+ * multi-column sections overflowed on phones. The selectors below match React's
+ * serialisation, and cover every multi-column template the design actually
+ * uses — not just the three the prototype happened to list.
+ */
+@media (max-width: 980px) {
+  [style*='grid-template-columns:repeat(5, 1fr)'] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*='grid-template-columns:0.9fr 1.7fr 0.9fr 0.95fr'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:0.9fr 1.7fr 1.2fr'] { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 680px) {
+  header { padding-left: 18px !important; padding-right: 18px !important; gap: 14px !important; justify-content: space-between; }
+  .main-nav { display: none !important; }
+  .nav-cta { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+
+  main > section,
+  main[data-screen-label='Home'] > section { padding-left: 18px !important; padding-right: 18px !important; }
+
+  [style*='grid-template-columns:1fr 1fr'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:1fr 1.4fr'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:1fr 380px'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:168px 1fr'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:repeat(3, 1fr)'] { grid-template-columns: 1fr !important; }
+  [style*='grid-template-columns:repeat(4, 1fr)'] { grid-template-columns: repeat(2, 1fr) !important; }
+  [style*='grid-template-columns:repeat(5, 1fr)'] { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .modal-card { padding: 30px 20px 64px !important; }
+  .ha-card { padding: 26px 18px 34px !important; }
+  .swimlane-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+  .swimlane-row { min-width: 640px; }
+}
+
+/*
+ * Nothing may push the page wider than the viewport. The decorative hero
+ * layers (orbit ring, gradient path, glow orbs) deliberately extend past the
+ * content box, so they are clipped rather than allowed to widen the document.
+ */
+body { overflow-x: clip; }
+#hero { overflow: hidden; }
+
+/* ── Row / hero affordances ────────────────────────────────────────────── */
+.pf-row::after {
+  content: '\2192';
+  margin-left: auto;
+  padding-left: 8px;
+  color: var(--a, #34d399);
+  font-size: 12px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.18s, transform 0.18s;
+}
+.pf-row:hover::after { opacity: 0.95; transform: translateX(0); }
+
+.pf-hero { position: relative; }
+.pf-hero::after {
+  content: 'View case study \2192';
+  display: block;
+  margin-top: 11px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--a, #34d399);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.pf-hero:hover::after { opacity: 1; }
+
+/* ── Motion accessibility ──────────────────────────────────────────────────
+   Every decorative animation is opt-out. Reveals resolve to their end state
+   so no content is left invisible when motion is reduced.
+   ───────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [data-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; }
+}
+
+/* ── Overlay collision ─────────────────────────────────────────────────────
+   The first-visit ⌘K hint and the assistant chat dock both anchor to the
+   bottom-right corner, and the hint sits above the dock in the stack — which
+   left the chat button unclickable for the whole time the hint was showing.
+   Lift the hint clear of the 52px dock button so both stay reachable.
+   ───────────────────────────────────────────────────────────────────────── */
+[data-khint] {
+  bottom: 92px !important;
+}
