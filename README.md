@@ -224,12 +224,15 @@ Two of these are decisions, not code — they need Abdul's input:
     user names/emails, depot/site names, project names/IDs, and the Depots
     directory. Kept sharp: order/asset codes, statuses, distances, aggregate
     KPI dashboards, and all chrome — so the screens still read as a real product.
-  - **Full-blur (`execintel/` 4)** — this executive-intel tool is wall-to-wall
-    project / deal names, so the whole image is blurred
-    (`scripts/redact-screenshots.py`).
-  - **Left sharp:** `scmhub/` (kept by decision), the fero aggregate dashboards
-    (no PII), `itemcode/` (diagrams), `tharwa/` (personal venture, sample data),
-    and all `deepdive/*` case studies (concepts/teardowns).
+  - **Region-blur (`execintel/` 3 screens)** — masks the internal strategic
+    content (competitive positioning vs Linde/Air Products, target accounts,
+    market-entry actions, GC project pipeline and opportunity radar, the
+    project-name column, competitor leadership names); KPI tiles, public news,
+    market data, country lists and structure stay sharp. `Geopolitical.jpg` is
+    pure public news / risk levels, so it is left untouched.
+  - **Left sharp:** `scmhub/` (kept by decision), `execintel/Geopolitical.jpg`,
+    the fero aggregate dashboards (no PII), `itemcode/` (diagrams), `tharwa/`
+    (personal venture, sample data), and all `deepdive/*` case studies.
   - **Still open:** the real *metrics and names* in `src/data/` are untouched
     (standard on a resume, but tell me if any should be generalised).
   - **⚠ git history:** the sharp originals were committed before redaction, so
