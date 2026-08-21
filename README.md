@@ -65,11 +65,15 @@ or the generated files in `src/data/` — those changes are lost on regeneration
 ```
 src/
   app/
-    layout.tsx        fonts, metadata, viewport
+    layout.tsx        fonts, metadata, viewport, robots directive
     page.tsx
     globals.css       design tokens, keyframes, responsive rules
     hover.css         generated :hover rules (from style-hover)
     icon.svg
+    opengraph-image.tsx  generated 1200×630 social card
+    twitter-image.tsx    reuses the OG card
+    robots.ts         env-driven crawler rules
+    sitemap.ts        single-route sitemap
   components/
     Portfolio.tsx     the shell — composition and stacking order
     BootIntro.tsx     first-visit boot sequence (hand-written)
@@ -88,8 +92,12 @@ src/
     chat.ts           assistant chat decision tree
     introStore.ts     whether this page load plays the boot intro
     style.ts          CSS-string → React style object helpers
+    site.ts           env-driven site config (URL, indexing, metadata)
 public/assets/        screenshots + resume PDF
 ```
+
+Deploy config lives in `next.config.ts` (security headers, image handling) and
+`.env.example` (the two optional env vars).
 
 ### The view model
 
@@ -161,27 +169,62 @@ These are the only places the implementation differs from the handoff, and why:
 - **Chat toggle** — given an accessible name; it was an unlabelled icon button.
 - **Escape** — also closes the mobile nav drawer, which previously had no
   keyboard dismissal.
+- **Screenshot paths** — the ported content kept the prototype's relative
+  `assets/…` paths in two data files, which resolve only when the app is served
+  at `/`. All 86 are now root-absolute so they survive a base path or a modal
+  opened from any route.
 - **Not ported** — `support.js` and `image-slot.js` are prototype-only, as the
   handoff instructs. The prototype's unreachable "detail page" view (its
   `isDetail` flag is hard-coded `false`) was dropped as dead code.
 
+## Deploying
+
+The app is a static-friendly Next build and runs with no required env vars, but
+two optional ones control indexing and absolute URLs:
+
+| Env var | Effect |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin (no trailing slash). Sets `metadataBase` so OpenGraph/Twitter and canonical URLs are absolute, and the sitemap host. |
+| `NEXT_PUBLIC_ALLOW_INDEXING` | `true` opens the site to search engines. Anything else (**the default**) serves `noindex` and `Disallow: /`. |
+
+See `.env.example`. **Indexing is off by default on purpose** — it stays off
+until you set both vars, which is the safe posture while the confidentiality
+review (below) is open. Flip them once the review is done and you want the site
+found.
+
+Production extras already wired in:
+
+- **Security headers** (`next.config.ts`): a Content-Security-Policy scoped to
+  what the app actually loads, plus `X-Content-Type-Options`, `Referrer-Policy`,
+  `Permissions-Policy`, HSTS, and `X-Frame-Options: SAMEORIGIN` (the resume PDF
+  is a same-origin `<object>`; cross-origin framing is still blocked).
+- **Social card** — a generated 1200×630 OpenGraph/Twitter image
+  (`src/app/opengraph-image.tsx`) matching the site's look.
+- **`robots.txt` / `sitemap.xml`** generated from the env config above.
+
+The `npm run audit` and `npm run check:responsive` suites both run against the
+production security headers, so a CSP that broke a feature would fail the build
+checks.
+
 ## Open items
 
-Carried over from the handoff — these need Abdul's decision, not a code change:
+Two of these are decisions, not code — they need Abdul's input:
 
-- **Assistant chat is a scripted decision tree.** The intended production
-  version answers questions in first person about the work, grounded in the
-  project and agent content, via an LLM. That needs a server-side API key and a
-  confirmed scope, so the scripted tree ships as specified. Swapping it in
-  means replacing `chatMessages` / `chatReplies` in the view model with a
-  transcript fed by a route handler — the dock UI does not change. **Never ship
-  an API key client-side.**
-- **Screenshots pending.** Catalog entries and category tiles without a
-  screenshot render a labelled placeholder. The handoff's changelog lists these
-  as known and accepted for the current export.
-- **Confidentiality review pending.** The handoff flags that Last Mile Platform
-  screenshots, Gulf Cryo names and real operational numbers may need redaction
-  before a public deploy. Nothing has been redacted here.
+- **Confidentiality review — the one gate on a *public* deploy.** The content
+  carries real employer/authority names, ~30 real operational metrics, and 85
+  internal product screenshots. Nothing is redacted. Indexing is off by default
+  (above) so the site is not discoverable until this is settled. **To redact:
+  tell me which specific screenshots, numbers, or names to remove** and I'll do
+  exactly that — the screenshots live in `public/assets/`, and copy/metrics are
+  in `src/data/`.
+- **Screenshots pending.** Some catalog entries and category tiles have no
+  screenshot and render a labelled placeholder. The handoff's changelog lists
+  these as known and accepted; supply the images to fill them.
+- **Assistant chat is a scripted decision tree** — kept as-is by decision. The
+  live LLM version answers in first person, grounded in the project/agent
+  content, via a server-side route; it needs an `ANTHROPIC_API_KEY` at deploy
+  time (never client-side) and would replace `chatMessages` / `chatReplies` in
+  the view model. The dock UI would not change.
 
 ## Verification
 

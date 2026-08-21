@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google'
 
+import { ALLOW_INDEXING, SITE, SITE_URL } from '@/lib/site'
 import './globals.css'
 import './hover.css'
 
@@ -20,13 +21,14 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: 'swap',
 })
 
-const DESCRIPTION =
-  'Senior Product Manager (Data & AI, Dubai). Enterprise AI products, autonomous agents, and healthcare AI case studies — built, shipped, and measured across 10 countries.'
-
 export const metadata: Metadata = {
-  title: 'Abdul Muwahib — AI Product Manager',
-  description: DESCRIPTION,
-  authors: [{ name: 'Abdul Muwahib' }],
+  // Resolves relative OG / canonical URLs against the deploy origin.
+  metadataBase: new URL(SITE_URL),
+  title: SITE.title,
+  description: SITE.description,
+  applicationName: SITE.title,
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
   keywords: [
     'Product Manager',
     'AI Product Manager',
@@ -37,10 +39,24 @@ export const metadata: Metadata = {
     'Healthcare AI',
     'Supply Chain',
   ],
+  alternates: { canonical: '/' },
+  // Indexing stays off until a real site URL is set and indexing is opted into
+  // — the safe default while the confidentiality review is outstanding.
+  robots: ALLOW_INDEXING
+    ? { index: true, follow: true }
+    : { index: false, follow: false, nocache: true },
   openGraph: {
-    title: 'Abdul Muwahib — AI Product Manager',
-    description: DESCRIPTION,
     type: 'website',
+    siteName: SITE.title,
+    title: SITE.title,
+    description: SITE.description,
+    url: '/',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.title,
+    description: SITE.description,
   },
 }
 
@@ -51,7 +67,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
+    <html lang={SITE.locale} className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}>
       <body>{children}</body>
     </html>
   )
