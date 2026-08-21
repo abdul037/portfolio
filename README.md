@@ -224,12 +224,12 @@ Two of these are decisions, not code — they need Abdul's input:
     user names/emails, depot/site names, project names/IDs, and the Depots
     directory. Kept sharp: order/asset codes, statuses, distances, aggregate
     KPI dashboards, and all chrome — so the screens still read as a real product.
-  - **Full-blur (`scmhub/` 6, `execintel/` 4)** — these internal PM/intel tools
-    are wall-to-wall project and owner names, so the whole image is blurred
+  - **Full-blur (`execintel/` 4)** — this executive-intel tool is wall-to-wall
+    project / deal names, so the whole image is blurred
     (`scripts/redact-screenshots.py`).
-  - **Left sharp:** the fero aggregate dashboards (no PII), `itemcode/`
-    (diagrams), `tharwa/` (personal venture, sample data), and all `deepdive/*`
-    case studies (concepts/teardowns).
+  - **Left sharp:** `scmhub/` (kept by decision), the fero aggregate dashboards
+    (no PII), `itemcode/` (diagrams), `tharwa/` (personal venture, sample data),
+    and all `deepdive/*` case studies (concepts/teardowns).
   - **Still open:** the real *metrics and names* in `src/data/` are untouched
     (standard on a resume, but tell me if any should be generalised).
   - **⚠ git history:** the sharp originals were committed before redaction, so
