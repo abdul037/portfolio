@@ -1076,7 +1076,7 @@ PORTFOLIO_PROJECTS.tharwa = {
         'Free-forever entry \u2014 no credit card at signup'
       ],
       shots: [
-        { src: 'assets/tharwa/Landing.jpg', w: 1419, h: 936, caption: 'Tharwa Net \u2014 landing: personal wealth manager for UAE families with live net-worth dashboard' }
+        { src: '/assets/tharwa/Landing.jpg', w: 1419, h: 936, caption: 'Tharwa Net \u2014 landing: personal wealth manager for UAE families with live net-worth dashboard' }
       ]
     },
     {
@@ -1090,7 +1090,7 @@ PORTFOLIO_PROJECTS.tharwa = {
         'Multi-currency with built-in converter; command-K global search'
       ],
       shots: [
-        { src: 'assets/tharwa/Dashboard.jpg', w: 1848, h: 823, caption: 'Dashboard \u2014 net worth, invested vs cash split, and AI-powered natural-language quick add' }
+        { src: '/assets/tharwa/Dashboard.jpg', w: 1848, h: 823, caption: 'Dashboard \u2014 net worth, invested vs cash split, and AI-powered natural-language quick add' }
       ]
     },
     {
@@ -1104,8 +1104,8 @@ PORTFOLIO_PROJECTS.tharwa = {
         'Full expense ledger with category filters and quick add'
       ],
       shots: [
-        { src: 'assets/tharwa/Income.jpg', w: 1839, h: 926, caption: 'Income \u2014 6-month trend by contributor and recurring income registry' },
-        { src: 'assets/tharwa/Expenses.jpg', w: 1834, h: 873, caption: 'Expenses \u2014 spending over time by category with the full expense ledger' }
+        { src: '/assets/tharwa/Income.jpg', w: 1839, h: 926, caption: 'Income \u2014 6-month trend by contributor and recurring income registry' },
+        { src: '/assets/tharwa/Expenses.jpg', w: 1834, h: 873, caption: 'Expenses \u2014 spending over time by category with the full expense ledger' }
       ]
     },
     {
@@ -1119,8 +1119,8 @@ PORTFOLIO_PROJECTS.tharwa = {
         'Goal views by progress, distribution, and category; active vs achieved tracking'
       ],
       shots: [
-        { src: 'assets/tharwa/Budget.jpg', w: 1845, h: 861, caption: 'Budget Planner \u2014 income allocation by category with recurring, calendar, and vacation tabs' },
-        { src: 'assets/tharwa/SavingsGoals.jpg', w: 1816, h: 854, caption: 'Savings Goals \u2014 overall progress and per-goal visualization' }
+        { src: '/assets/tharwa/Budget.jpg', w: 1845, h: 861, caption: 'Budget Planner \u2014 income allocation by category with recurring, calendar, and vacation tabs' },
+        { src: '/assets/tharwa/SavingsGoals.jpg', w: 1816, h: 854, caption: 'Savings Goals \u2014 overall progress and per-goal visualization' }
       ]
     },
     {
@@ -1133,7 +1133,7 @@ PORTFOLIO_PROJECTS.tharwa = {
         'Split expenses and partner accounts for shared household money'
       ],
       shots: [
-        { src: 'assets/tharwa/Social.jpg', w: 1842, h: 960, caption: 'Social \u2014 community circles, friends, and challenges with Plus / Pro tiers' }
+        { src: '/assets/tharwa/Social.jpg', w: 1842, h: 960, caption: 'Social \u2014 community circles, friends, and challenges with Plus / Pro tiers' }
       ]
     }
   ]
@@ -1174,7 +1174,7 @@ PORTFOLIO_PROJECTS.execintel = {
         'Scrolling live-intel ticker with Zulu-time stamp'
       ],
       shots: [
-        { src: 'assets/execintel/Dashboard.jpg', w: 1666, h: 964, caption: 'Executive Intelligence — main dashboard: risk, status, projects, opportunity score, live pulse, and market rail' }
+        { src: '/assets/execintel/Dashboard.jpg', w: 1666, h: 964, caption: 'Executive Intelligence — main dashboard: risk, status, projects, opportunity score, live pulse, and market rail' }
       ]
     },
     {
@@ -1188,7 +1188,7 @@ PORTFOLIO_PROJECTS.execintel = {
         'Filter and export for briefing packs'
       ],
       shots: [
-        { src: 'assets/execintel/Geopolitical.jpg', w: 1668, h: 960, caption: 'Geopolitical Intelligence — live risk overlay, critical incidents, risk by region, and vetted live feed' }
+        { src: '/assets/execintel/Geopolitical.jpg', w: 1668, h: 960, caption: 'Geopolitical Intelligence — live risk overlay, critical incidents, risk by region, and vetted live feed' }
       ]
     },
     {
@@ -1202,7 +1202,7 @@ PORTFOLIO_PROJECTS.execintel = {
         'One-click Excel / PDF / share export'
       ],
       shots: [
-        { src: 'assets/execintel/IndustrySummary.jpg', w: 1663, h: 846, caption: 'Weekly Industry Summary — M&A table, leadership moves, resilience index, and notable developments' }
+        { src: '/assets/execintel/IndustrySummary.jpg', w: 1663, h: 846, caption: 'Weekly Industry Summary — M&A table, leadership moves, resilience index, and notable developments' }
       ]
     },
     {
@@ -1215,7 +1215,7 @@ PORTFOLIO_PROJECTS.execintel = {
         'Competitor market positioning matrix — Linde, Air Products, Air Liquide, Messer — with contested markets flagged'
       ],
       shots: [
-        { src: 'assets/execintel/ProjectTracker.jpg', w: 1664, h: 957, caption: 'Regional Project Tracking — territory intelligence, opportunity radar, and competitor positioning matrix' }
+        { src: '/assets/execintel/ProjectTracker.jpg', w: 1664, h: 957, caption: 'Regional Project Tracking — territory intelligence, opportunity radar, and competitor positioning matrix' }
       ]
     }
   ]
@@ -1255,7 +1255,7 @@ PORTFOLIO_PROJECTS.itemcode = {
         'Expand-all / collapse-all and per-card field reveal'
       ],
       shots: [
-        { src: 'assets/itemcode/ExistingTree.jpg', w: 896, h: 919, caption: 'Existing workflow \u2014 decision tree: Item vs Service, 7 sub-categories, shared attribute set' }
+        { src: '/assets/itemcode/ExistingTree.jpg', w: 896, h: 919, caption: 'Existing workflow \u2014 decision tree: Item vs Service, 7 sub-categories, shared attribute set' }
       ]
     },
     {
@@ -1269,7 +1269,7 @@ PORTFOLIO_PROJECTS.itemcode = {
         'Common finalisation phase applying 9 shared fields to every category'
       ],
       shots: [
-        { src: 'assets/itemcode/ProposedSwimlane.jpg', w: 881, h: 924, caption: 'Proposed workflow \u2014 swimlane: phased request, Gas / Non-Gas classification, type-specific field sets' }
+        { src: '/assets/itemcode/ProposedSwimlane.jpg', w: 881, h: 924, caption: 'Proposed workflow \u2014 swimlane: phased request, Gas / Non-Gas classification, type-specific field sets' }
       ]
     }
   ]
@@ -1310,7 +1310,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Daily / weekly / monthly toggle and a Present mode for leadership'
       ],
       shots: [
-        { src: 'assets/scmhub/Overview.jpg', w: 1845, h: 923, caption: 'Executive Overview \u2014 portfolio KPIs, workstream distribution, action categories, and project cards' }
+        { src: '/assets/scmhub/Overview.jpg', w: 1845, h: 923, caption: 'Executive Overview \u2014 portfolio KPIs, workstream distribution, action categories, and project cards' }
       ]
     },
     {
@@ -1323,7 +1323,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Workstream tags and status filters across the grid'
       ],
       shots: [
-        { src: 'assets/scmhub/Portfolio.jpg', w: 1844, h: 925, caption: 'Portfolio \u2014 projects and tasks with owners, statuses, blockers, and update logs' }
+        { src: '/assets/scmhub/Portfolio.jpg', w: 1844, h: 925, caption: 'Portfolio \u2014 projects and tasks with owners, statuses, blockers, and update logs' }
       ]
     },
     {
@@ -1336,7 +1336,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Manage / Promote action moving intake into the live portfolio'
       ],
       shots: [
-        { src: 'assets/scmhub/Pipeline.jpg', w: 1848, h: 927, caption: 'Pipeline / Intake \u2014 staged demand board with priority, effort, and source tags' }
+        { src: '/assets/scmhub/Pipeline.jpg', w: 1848, h: 927, caption: 'Pipeline / Intake \u2014 staged demand board with priority, effort, and source tags' }
       ]
     },
     {
@@ -1349,7 +1349,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Sprint header with team avatars and blocked / UAT counts'
       ],
       shots: [
-        { src: 'assets/scmhub/SprintBoard.jpg', w: 1839, h: 925, caption: 'Sprint Board \u2014 active sprint kanban with blocked and UAT columns' }
+        { src: '/assets/scmhub/SprintBoard.jpg', w: 1839, h: 925, caption: 'Sprint Board \u2014 active sprint kanban with blocked and UAT columns' }
       ]
     },
     {
@@ -1362,7 +1362,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Linked Unified Roadmap for the full Active + BAU + Pipeline readout'
       ],
       shots: [
-        { src: 'assets/scmhub/Roadmap.jpg', w: 1832, h: 913, caption: 'Strategic Roadmap \u2014 quarterly initiatives per workstream with progress' }
+        { src: '/assets/scmhub/Roadmap.jpg', w: 1832, h: 913, caption: 'Strategic Roadmap \u2014 quarterly initiatives per workstream with progress' }
       ]
     },
     {
@@ -1375,7 +1375,7 @@ PORTFOLIO_PROJECTS.scmhub = {
         'Per-workstream digest generated from actual project updates'
       ],
       shots: [
-        { src: 'assets/scmhub/TechPulse.jpg', w: 1839, h: 927, caption: 'SCM Tech Pulse \u2014 the built-in newsletter: stats, featured update, and workstream digest' }
+        { src: '/assets/scmhub/TechPulse.jpg', w: 1839, h: 927, caption: 'SCM Tech Pulse \u2014 the built-in newsletter: stats, featured update, and workstream digest' }
       ]
     }
   ]

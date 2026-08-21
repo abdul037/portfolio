@@ -22,10 +22,15 @@ npm start
 Other scripts:
 
 ```bash
-npm run typecheck   # tsc --noEmit
-npx eslint src      # lint
-node smoke.mjs      # browser smoke test — needs `npm start` on :3000
+npm run typecheck          # tsc --noEmit
+npm run lint
+npm run smoke              # 17 interaction checks
+npm run audit              # every modal, every agent study, every asset
+npm run check:responsive   # overflow + reduced-motion
 ```
+
+The three browser checks need the app running (`npm run build && npm start`)
+and Playwright's Chromium (`npx playwright install chromium`).
 
 ## How the design was ported
 
@@ -180,13 +185,14 @@ Carried over from the handoff — these need Abdul's decision, not a code change
 
 ## Verification
 
-`smoke.mjs` drives the built app in Chromium and asserts each interactive
-surface — boot sequence, every home section, scroll-spy, career accordion,
-both modal types and their tabs, both filter sets, the catalog, the terminal
-(including its not-found path), presentation mode, the chat branch, and the
-resume viewer — and fails on any console error or non-2xx response.
+Three browser suites, each failing on any console error or non-2xx response.
+Start the built app first (`npm run build && npm start`).
 
-```bash
-npm run build && npm start &
-node smoke.mjs
-```
+| Command | What it covers |
+| --- | --- |
+| `npm run smoke` | One check per interactive surface: boot sequence, every home section, scroll-spy, career accordion, both modal types and their tabs, both filter sets, the catalog, the terminal (including its not-found path), presentation mode, the chat branch, the resume viewer |
+| `npm run audit` | The whole catalog rather than a sample: opens all 62 project modals and all 15 agent studies on both tabs, asserts each renders real content with no broken image, resolves every asset path the content references, and checks a spread of terminal aliases |
+| `npm run check:responsive` | Zero horizontal overflow at four viewports, mobile drawer opens and closes on Escape, and reduced-motion leaves no revealed content invisible |
+
+Last full run: 17/17 smoke, 62/62 modals, 15/15 agent studies, 86/86 assets
+resolving, no hydration or console errors, no overflow at any viewport.

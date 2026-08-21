@@ -89,15 +89,15 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Trend analysis with period-over-period deltas — order volume, delivery rate, delivered volume, cycle time, drop count, and on-time completion, sliceable by product group'
         ],
         shots: [
-          { src: 'assets/fero/Dashboard_Bulk_1.jpg', w: 1907, h: 945, caption: 'Dashboard · Bulk — executive summary KPIs with health states, and SLA performance with thresholds and breach counts' },
-          { src: 'assets/fero/Dashboard_Bulk_2.jpg', w: 1898, h: 928, caption: 'Dashboard · Bulk — trend analysis: volume, delivery rate, cycle time, and weight loss by operational product group' },
-          { src: 'assets/fero/Dashboard_PG_1.jpg', w: 1896, h: 947, caption: 'Dashboard · Package — fill rates, equipment balance, delivery-window SLAs, and quantity by unit of measure' },
-          { src: 'assets/fero/Dashboard_PG_2.jpg', w: 1889, h: 933, caption: 'Dashboard · Package — order status distribution, quantity by rack / cylinder / dewar, and empty-collection, POD, and on-time trends' },
-          { src: 'assets/fero/Dashboard_Milkrun.jpg', w: 1891, h: 946, caption: 'Dashboard · Milkrun — van-stock utilization, returned stock, POD capture, orders per trip, and cash collected per trip' },
-          { src: 'assets/fero/Dashboard_Customers.jpg', w: 1901, h: 934, caption: 'Dashboard · Customer — customer-base KPIs, address-verification and contact-validity SLAs, and status distribution' },
-          { src: 'assets/fero/Dashboard_Customers_2.jpg', w: 1889, h: 947, caption: 'Dashboard · Customer — top customers per segment and at-risk customers with declining-order detection (6mo vs prior 6mo)' },
-          { src: 'assets/fero/Dashboard_Drivers.jpg', w: 1894, h: 921, caption: 'Dashboard · Fleet / Driver — utilization overview, on-time delivery, attendance, document validity, and driver SLAs' },
-          { src: 'assets/fero/Dashboard_Vehicles.jpg', w: 1894, h: 889, caption: 'Dashboard · Fleet / Vehicle — utilization, downtime, and registration / insurance / MVPI / OPG compliance SLAs' }
+          { src: '/assets/fero/Dashboard_Bulk_1.jpg', w: 1907, h: 945, caption: 'Dashboard · Bulk — executive summary KPIs with health states, and SLA performance with thresholds and breach counts' },
+          { src: '/assets/fero/Dashboard_Bulk_2.jpg', w: 1898, h: 928, caption: 'Dashboard · Bulk — trend analysis: volume, delivery rate, cycle time, and weight loss by operational product group' },
+          { src: '/assets/fero/Dashboard_PG_1.jpg', w: 1896, h: 947, caption: 'Dashboard · Package — fill rates, equipment balance, delivery-window SLAs, and quantity by unit of measure' },
+          { src: '/assets/fero/Dashboard_PG_2.jpg', w: 1889, h: 933, caption: 'Dashboard · Package — order status distribution, quantity by rack / cylinder / dewar, and empty-collection, POD, and on-time trends' },
+          { src: '/assets/fero/Dashboard_Milkrun.jpg', w: 1891, h: 946, caption: 'Dashboard · Milkrun — van-stock utilization, returned stock, POD capture, orders per trip, and cash collected per trip' },
+          { src: '/assets/fero/Dashboard_Customers.jpg', w: 1901, h: 934, caption: 'Dashboard · Customer — customer-base KPIs, address-verification and contact-validity SLAs, and status distribution' },
+          { src: '/assets/fero/Dashboard_Customers_2.jpg', w: 1889, h: 947, caption: 'Dashboard · Customer — top customers per segment and at-risk customers with declining-order detection (6mo vs prior 6mo)' },
+          { src: '/assets/fero/Dashboard_Drivers.jpg', w: 1894, h: 921, caption: 'Dashboard · Fleet / Driver — utilization overview, on-time delivery, attendance, document validity, and driver SLAs' },
+          { src: '/assets/fero/Dashboard_Vehicles.jpg', w: 1894, h: 889, caption: 'Dashboard · Fleet / Vehicle — utilization, downtime, and registration / insurance / MVPI / OPG compliance SLAs' }
         ]
       },
       {
@@ -112,8 +112,8 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Net effect: exception handling moves from reactive (customer calls to complain) to proactive (dispatcher intervenes mid-route), and end-of-day delivery disputes drop because planned vs actual is recorded per stop'
         ],
         shots: [
-          { src: 'assets/fero/Control_Tower_Bulk.jpg', w: 1901, h: 931, caption: 'Control Tower · Bulk — live trips, order and driver locations on the map, delivered vs ordered weight per order' },
-          { src: 'assets/fero/Control_Tower_PG.jpg', w: 1887, h: 933, caption: 'Control Tower · Package — selected trip route with planned vs actual path and numbered stop sequence' }
+          { src: '/assets/fero/Control_Tower_Bulk.jpg', w: 1901, h: 931, caption: 'Control Tower · Bulk — live trips, order and driver locations on the map, delivered vs ordered weight per order' },
+          { src: '/assets/fero/Control_Tower_PG.jpg', w: 1887, h: 933, caption: 'Control Tower · Package — selected trip route with planned vs actual path and numbered stop sequence' }
         ]
       },
       {
@@ -126,7 +126,7 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Faceted filters (project, status, order type, on-site, confirmation) plus saved-view and bulk-action tooling'
         ],
         shots: [
-          { src: 'assets/fero/BulkOrders.jpg', w: 1889, h: 923, caption: 'Order Management · Bulk Orders — 103,260 orders with lifecycle status, D365 linkage, and customer address IDs' }
+          { src: '/assets/fero/BulkOrders.jpg', w: 1889, h: 923, caption: 'Order Management · Bulk Orders — 103,260 orders with lifecycle status, D365 linkage, and customer address IDs' }
         ]
       },
       {
@@ -139,8 +139,8 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Milkrun trip confirmation workflow with creation timestamps for morning dispatch discipline'
         ],
         shots: [
-          { src: 'assets/fero/BulkTrips.jpg', w: 1889, h: 916, caption: 'Trip Management · Bulk Trips — 29,767 trips with driver / vehicle / tank assignment and exception flags' },
-          { src: 'assets/fero/MilkrunTrips.jpg', w: 1890, h: 911, caption: 'Trip Management · Milkrun Trips — recurring van routes with confirmation status and driver-vehicle pairing' }
+          { src: '/assets/fero/BulkTrips.jpg', w: 1889, h: 916, caption: 'Trip Management · Bulk Trips — 29,767 trips with driver / vehicle / tank assignment and exception flags' },
+          { src: '/assets/fero/MilkrunTrips.jpg', w: 1890, h: 911, caption: 'Trip Management · Milkrun Trips — recurring van routes with confirmation status and driver-vehicle pairing' }
         ]
       },
       {
@@ -153,8 +153,8 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Event subscriptions for customer-facing delivery notifications'
         ],
         shots: [
-          { src: 'assets/fero/CustomerMaster.jpg', w: 1888, h: 908, caption: 'Customer Management · Customers — 22,185 customers across legal entities with type and segment flags' },
-          { src: 'assets/fero/DeliveryAddressCorrection.jpg', w: 1890, h: 911, caption: 'Customer Management · Address Verification — driver-submitted corrections with previous vs new coordinates and distance-moved audit' }
+          { src: '/assets/fero/CustomerMaster.jpg', w: 1888, h: 908, caption: 'Customer Management · Customers — 22,185 customers across legal entities with type and segment flags' },
+          { src: '/assets/fero/DeliveryAddressCorrection.jpg', w: 1890, h: 911, caption: 'Customer Management · Address Verification — driver-submitted corrections with previous vs new coordinates and distance-moved audit' }
         ]
       },
       {
@@ -167,8 +167,8 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'UOM masters (cylinder, dewar, rack, container) powering equipment-balance analytics upstream'
         ],
         shots: [
-          { src: 'assets/fero/InventoryManagement.jpg', w: 1893, h: 913, caption: 'Inventory Management — serialized, barcode-tracked units with customer custody fields' },
-          { src: 'assets/fero/ItemMaster.jpg', w: 1891, h: 923, caption: 'Item Master — items with weights, conversion factors, operational product groups, and UoM per legal entity' }
+          { src: '/assets/fero/InventoryManagement.jpg', w: 1893, h: 913, caption: 'Inventory Management — serialized, barcode-tracked units with customer custody fields' },
+          { src: '/assets/fero/ItemMaster.jpg', w: 1891, h: 923, caption: 'Item Master — items with weights, conversion factors, operational product groups, and UoM per legal entity' }
         ]
       },
       {
@@ -181,8 +181,8 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Document tracking behind registration, insurance, and MVPI compliance KPIs'
         ],
         shots: [
-          { src: 'assets/fero/FleetMaster.jpg', w: 1895, h: 916, caption: 'Fleet Management · Vehicles — 977 vehicles with asset type, ownership, capacity, and depot assignment' },
-          { src: 'assets/fero/DriverWorkingHours.jpg', w: 1888, h: 904, caption: 'Fleet Management · Driver Check-In/Out Logs — 36,828 depot-gate attendance records with shift duration' }
+          { src: '/assets/fero/FleetMaster.jpg', w: 1895, h: 916, caption: 'Fleet Management · Vehicles — 977 vehicles with asset type, ownership, capacity, and depot assignment' },
+          { src: '/assets/fero/DriverWorkingHours.jpg', w: 1888, h: 904, caption: 'Fleet Management · Driver Check-In/Out Logs — 36,828 depot-gate attendance records with shift duration' }
         ]
       },
       {
@@ -195,7 +195,7 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Success and request-type filters for rapid triage of interface incidents'
         ],
         shots: [
-          { src: 'assets/fero/IntegrationLogs.jpg', w: 1885, h: 912, caption: 'Integration Logs · Order Logs — 437,441 D365 integration messages with payload inspection and resend actions' }
+          { src: '/assets/fero/IntegrationLogs.jpg', w: 1885, h: 912, caption: 'Integration Logs · Order Logs — 437,441 D365 integration messages with payload inspection and resend actions' }
         ]
       },
       {
@@ -208,7 +208,7 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Pre / post trip checklists, tags, and transporter registries driving driver-app behavior'
         ],
         shots: [
-          { src: 'assets/fero/SystemAdminConfiguration.jpg', w: 1887, h: 936, caption: 'Configurations · Depots — 42 depots across legal entities and countries, geo-coded and audit-stamped' }
+          { src: '/assets/fero/SystemAdminConfiguration.jpg', w: 1887, h: 936, caption: 'Configurations · Depots — 42 depots across legal entities and countries, geo-coded and audit-stamped' }
         ]
       },
       {
@@ -220,7 +220,7 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Onboarding trail — every user records who added them'
         ],
         shots: [
-          { src: 'assets/fero/UserAccess.jpg', w: 1890, h: 925, caption: 'User Management · Users — depot-scoped roles, activation state, and audit-log export' }
+          { src: '/assets/fero/UserAccess.jpg', w: 1890, h: 925, caption: 'User Management · Users — depot-scoped roles, activation state, and audit-log export' }
         ]
       }
     ]
@@ -245,7 +245,7 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
           'Manual overrides welcome \u2014 add trips, reassign drivers and vehicles, then export the trip manifest'
         ],
         shots: [
-          { src: 'assets/fero/RoutePlanning.jpg', w: 1619, h: 924, caption: 'Route Planning \u2014 AI Auto-Plan: system-generated trips with utilization, stops, distance, and zone tags against the live order map' }
+          { src: '/assets/fero/RoutePlanning.jpg', w: 1619, h: 924, caption: 'Route Planning \u2014 AI Auto-Plan: system-generated trips with utilization, stops, distance, and zone tags against the live order map' }
         ]
       }
     ],
@@ -511,9 +511,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   demand_forecast: {
     shots: [
-      { src: 'assets/deepdive/supply-chain/feat-demand.jpg', w: 1600, h: 1000, caption: 'Demand Forecasting — predictive consumption dashboard with forecast accuracy and stockout risk overview' },
-      { src: 'assets/deepdive/supply-chain/dd-demand-1.jpg', w: 5120, h: 3200, caption: 'Demand Forecasting — per-customer consumption trends, forecast accuracy, and stockout risk board with days-to-stockout ranking' },
-      { src: 'assets/deepdive/supply-chain/dd-demand-2.jpg', w: 5120, h: 3200, caption: 'Auto-Replenishment & Route Planning — proposed orders with depot routing, estimated distances, and one-click send-to-planning' }
+      { src: '/assets/deepdive/supply-chain/feat-demand.jpg', w: 1600, h: 1000, caption: 'Demand Forecasting — predictive consumption dashboard with forecast accuracy and stockout risk overview' },
+      { src: '/assets/deepdive/supply-chain/dd-demand-1.jpg', w: 5120, h: 3200, caption: 'Demand Forecasting — per-customer consumption trends, forecast accuracy, and stockout risk board with days-to-stockout ranking' },
+      { src: '/assets/deepdive/supply-chain/dd-demand-2.jpg', w: 5120, h: 3200, caption: 'Auto-Replenishment & Route Planning — proposed orders with depot routing, estimated distances, and one-click send-to-planning' }
     ],
     phases: [
       { name: 'Phase 1 · Data foundation', status: 'PROPOSED', detail: 'Assemble per-customer consumption histories from Dynamics 365 orders and Last Mile Platform delivery data (months 0-3).' },
@@ -533,9 +533,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   network_twin: {
     shots: [
-      { src: 'assets/deepdive/supply-chain/v6-cat-nettwin.jpg', w: 1600, h: 1000, caption: 'Logistics Network Digital Twin — end-to-end network model for scenario planning and optimisation' },
-      { src: 'assets/deepdive/supply-chain/dd-nettwin-1.jpg', w: 5120, h: 3200, caption: 'Logistics Network Digital Twin — scenario controls with fleet size, depot capacity, and service-level parameters over a live network map' },
-      { src: 'assets/deepdive/supply-chain/dd-nettwin-2.jpg', w: 5120, h: 3200, caption: 'Scenario Comparison — baseline vs alternative with delta analysis on total cost, transport, service level, on-time delivery, and CO2' }
+      { src: '/assets/deepdive/supply-chain/v6-cat-nettwin.jpg', w: 1600, h: 1000, caption: 'Logistics Network Digital Twin — end-to-end network model for scenario planning and optimisation' },
+      { src: '/assets/deepdive/supply-chain/dd-nettwin-1.jpg', w: 5120, h: 3200, caption: 'Logistics Network Digital Twin — scenario controls with fleet size, depot capacity, and service-level parameters over a live network map' },
+      { src: '/assets/deepdive/supply-chain/dd-nettwin-2.jpg', w: 5120, h: 3200, caption: 'Scenario Comparison — baseline vs alternative with delta analysis on total cost, transport, service level, on-time delivery, and CO2' }
     ],
     phases: [
       { name: 'Phase 1 · Mirror', status: 'PROPOSED', detail: 'Model the live network — depots, fleet, demand — from Last Mile Platform and IVMS feeds (months 0-3).' },
@@ -555,9 +555,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   fleet_maintenance: {
     shots: [
-      { src: 'assets/deepdive/supply-chain/v6-cat-fleetmaint.jpg', w: 1600, h: 1000, caption: 'Fleet Health Monitoring — predictive maintenance dashboard across the vehicle fleet' },
-      { src: 'assets/deepdive/supply-chain/dd-fleetmaint-1.jpg', w: 5120, h: 3200, caption: 'Vehicle Health Score — composite 82/100 score with engine, brakes, cooling, and tires subsystem gauges plus predicted-issue timeline' },
-      { src: 'assets/deepdive/supply-chain/dd-fleetmaint-2.jpg', w: 5120, h: 3200, caption: 'Maintenance Scheduling Queue — priority-ranked work orders with severity color-coding, calendar view, and one-click scheduling' }
+      { src: '/assets/deepdive/supply-chain/v6-cat-fleetmaint.jpg', w: 1600, h: 1000, caption: 'Fleet Health Monitoring — predictive maintenance dashboard across the vehicle fleet' },
+      { src: '/assets/deepdive/supply-chain/dd-fleetmaint-1.jpg', w: 5120, h: 3200, caption: 'Vehicle Health Score — composite 82/100 score with engine, brakes, cooling, and tires subsystem gauges plus predicted-issue timeline' },
+      { src: '/assets/deepdive/supply-chain/dd-fleetmaint-2.jpg', w: 5120, h: 3200, caption: 'Maintenance Scheduling Queue — priority-ranked work orders with severity color-coding, calendar view, and one-click scheduling' }
     ],
     phases: [
       { name: 'Phase 1 · Data', status: 'PROPOSED', detail: 'Aggregate IVMS telematics, fault codes, and service history per vehicle (months 0-3).' },
@@ -577,9 +577,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   crm_copilot: {
     shots: [
-      { src: 'assets/deepdive/crm/feat-salescopilot.jpg', w: 1600, h: 1000, caption: 'Sales Copilot for D365 — AI account assistant embedded in the CRM' },
-      { src: 'assets/deepdive/crm/dd-crmcopilot-1.jpg', w: 5120, h: 3200, caption: 'Sales Copilot — conversational account brief with events timeline, next-best-action feed, and pre-visit account snapshot' },
-      { src: 'assets/deepdive/crm/dd-crmcopilot-2.jpg', w: 5120, h: 3200, caption: 'Pre-Visit Account Brief & Next-Best-Action — health score, YTD revenue, open issues, and prioritized actions with confidence scores' }
+      { src: '/assets/deepdive/crm/feat-salescopilot.jpg', w: 1600, h: 1000, caption: 'Sales Copilot for D365 — AI account assistant embedded in the CRM' },
+      { src: '/assets/deepdive/crm/dd-crmcopilot-1.jpg', w: 5120, h: 3200, caption: 'Sales Copilot — conversational account brief with events timeline, next-best-action feed, and pre-visit account snapshot' },
+      { src: '/assets/deepdive/crm/dd-crmcopilot-2.jpg', w: 5120, h: 3200, caption: 'Pre-Visit Account Brief & Next-Best-Action — health score, YTD revenue, open issues, and prioritized actions with confidence scores' }
     ],
     phases: [
       { name: 'Phase 1 · Grounding', status: 'PROPOSED', detail: 'RAG index over account records — orders, cases, contracts, activity history (months 0-2).' },
@@ -599,9 +599,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   crm_churn: {
     shots: [
-      { src: 'assets/deepdive/crm/v6-cat-churn.jpg', w: 1600, h: 1000, caption: 'Churn & Retention AI — at-risk account detection and retention overview' },
-      { src: 'assets/deepdive/crm/dd-crmchurn-1.jpg', w: 5120, h: 3200, caption: 'Churn & Retention AI — at-risk account count, fund-at-risk value, risk distribution donut, and ranked at-risk worklist' },
-      { src: 'assets/deepdive/crm/dd-crmchurn-2.jpg', w: 5120, h: 3200, caption: 'Retention Playbook — per-account action plan with offer strategy, progress tracking, and outcome measurement' }
+      { src: '/assets/deepdive/crm/v6-cat-churn.jpg', w: 1600, h: 1000, caption: 'Churn & Retention AI — at-risk account detection and retention overview' },
+      { src: '/assets/deepdive/crm/dd-crmchurn-1.jpg', w: 5120, h: 3200, caption: 'Churn & Retention AI — at-risk account count, fund-at-risk value, risk distribution donut, and ranked at-risk worklist' },
+      { src: '/assets/deepdive/crm/dd-crmchurn-2.jpg', w: 5120, h: 3200, caption: 'Retention Playbook — per-account action plan with offer strategy, progress tracking, and outcome measurement' }
     ],
     phases: [
       { name: 'Phase 1 · Signals', status: 'PROPOSED', detail: 'Join CRM activity, ERP order history, and case data per account (months 0-2).' },
@@ -621,9 +621,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
   },
   crm_portal: {
     shots: [
-      { src: 'assets/deepdive/crm/v6-cat-custportal.jpg', w: 1600, h: 1000, caption: 'Customer Self-Service Portal — orders, deliveries, and invoices in one place' },
-      { src: 'assets/deepdive/crm/dd-crmportal-1.jpg', w: 5120, h: 3200, caption: 'Customer Self-Service Portal — welcome view with orders, deliveries, invoices summary cards and My Orders with status tracking' },
-      { src: 'assets/deepdive/crm/dd-crmportal-2.jpg', w: 5120, h: 3200, caption: 'Live Delivery Tracking — real-time map with driver location, ETA, distance, and delivery milestone timeline' }
+      { src: '/assets/deepdive/crm/v6-cat-custportal.jpg', w: 1600, h: 1000, caption: 'Customer Self-Service Portal — orders, deliveries, and invoices in one place' },
+      { src: '/assets/deepdive/crm/dd-crmportal-1.jpg', w: 5120, h: 3200, caption: 'Customer Self-Service Portal — welcome view with orders, deliveries, invoices summary cards and My Orders with status tracking' },
+      { src: '/assets/deepdive/crm/dd-crmportal-2.jpg', w: 5120, h: 3200, caption: 'Live Delivery Tracking — real-time map with driver location, ETA, distance, and delivery milestone timeline' }
     ],
     phases: [
       { name: 'Phase 1 · Identity', status: 'PROPOSED', detail: 'Customer identity and account linking against D365 with Azure AD B2C (months 0-2).' },
@@ -647,9 +647,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioMedical AI-Q Research Agent', role: 'Privacy-preserving reasoning over real-world patient data — connecting claims, encounters, and screening records to surface population-level chronic disease patterns.', url: 'https://build.nvidia.com/nvidia/biomedical-aiq-research-agent' }
     ],
     shots: [
-      { src: 'assets/deepdive/healthcare/feat-pophealth.jpg', w: 1600, h: 1000, caption: 'Predictive Population Health — emirate-scale risk-stratification dashboard' },
-      { src: 'assets/deepdive/healthcare/dd-pophealth-1.jpg', w: 5120, h: 3200, caption: 'Population Health Dashboard — Abu Dhabi regional risk heat-map with risk stratification pyramid and intervention campaign funnel' },
-      { src: 'assets/deepdive/healthcare/dd-pophealth-2.jpg', w: 5120, h: 3200, caption: 'Intervention Campaign Tracker — targeted-to-completed funnel with screening rate, compliance rate, and completion metrics' }
+      { src: '/assets/deepdive/healthcare/feat-pophealth.jpg', w: 1600, h: 1000, caption: 'Predictive Population Health — emirate-scale risk-stratification dashboard' },
+      { src: '/assets/deepdive/healthcare/dd-pophealth-1.jpg', w: 5120, h: 3200, caption: 'Population Health Dashboard — Abu Dhabi regional risk heat-map with risk stratification pyramid and intervention campaign funnel' },
+      { src: '/assets/deepdive/healthcare/dd-pophealth-2.jpg', w: 5120, h: 3200, caption: 'Intervention Campaign Tracker — targeted-to-completed funnel with screening rate, compliance rate, and completion metrics' }
     ],
     phases: [
       { name: 'Phase 1 · Data model', status: 'PROPOSED', detail: 'Unify claims, encounters, and screening data on a FHIR-based population model.' },
@@ -673,9 +673,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioNeMo', role: 'AI development platform for variant interpretation models — ranking genomic findings by severity and treatability for genetic counsellor triage.', url: 'https://github.com/NVIDIA-BioNeMo' }
     ],
     shots: [
-      { src: 'assets/deepdive/healthcare/v6-cat-newborn.jpg', w: 1600, h: 1000, caption: 'Newborn Genomic Screening — whole-genome screening platform for treatable conditions' },
-      { src: 'assets/deepdive/healthcare/dd-newborn-1.jpg', w: 5120, h: 3200, caption: 'Newborn Genomic Screening — DNA helix triage worklist with severity badges and genetic counsellor triage ranking' },
-      { src: 'assets/deepdive/healthcare/dd-newborn-2.jpg', w: 5120, h: 3200, caption: 'Pediatric Care Pathway Timeline — patient journey from triage through diagnostics, counselling, specialist review, to follow-up' }
+      { src: '/assets/deepdive/healthcare/v6-cat-newborn.jpg', w: 1600, h: 1000, caption: 'Newborn Genomic Screening — whole-genome screening platform for treatable conditions' },
+      { src: '/assets/deepdive/healthcare/dd-newborn-1.jpg', w: 5120, h: 3200, caption: 'Newborn Genomic Screening — DNA helix triage worklist with severity badges and genetic counsellor triage ranking' },
+      { src: '/assets/deepdive/healthcare/dd-newborn-2.jpg', w: 5120, h: 3200, caption: 'Pediatric Care Pathway Timeline — patient journey from triage through diagnostics, counselling, specialist review, to follow-up' }
     ],
     phases: [
       { name: 'Phase 1 · Intake', status: 'PROPOSED', detail: 'Consent capture and cord-blood sample registration inside the maternity ward workflow.' },
@@ -699,9 +699,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioMedical AI-Q Research Agent', role: 'Secure reasoning over cross-provider HIE records — generating clinician copilot summaries with care-gap flags grounded in the patient\'s full history.', url: 'https://build.nvidia.com/nvidia/biomedical-aiq-research-agent' }
     ],
     shots: [
-      { src: 'assets/deepdive/healthcare/v6-cat-shifa.jpg', w: 1600, h: 1000, caption: 'ShifaAI — bilingual clinical AI assistant for triage and clinician support' },
-      { src: 'assets/deepdive/healthcare/dd-shifa-1.jpg', w: 5120, h: 3200, caption: 'ShifaAI — bilingual chat with AR/EN toggle, symptom triage with red-flag detection and nearest-facility routing' },
-      { src: 'assets/deepdive/healthcare/dd-shifa-2.jpg', w: 5120, h: 3200, caption: 'Clinician Copilot Summary — cross-provider patient view with care gaps, recommendations, and medication adherence flags' }
+      { src: '/assets/deepdive/healthcare/v6-cat-shifa.jpg', w: 1600, h: 1000, caption: 'ShifaAI — bilingual clinical AI assistant for triage and clinician support' },
+      { src: '/assets/deepdive/healthcare/dd-shifa-1.jpg', w: 5120, h: 3200, caption: 'ShifaAI — bilingual chat with AR/EN toggle, symptom triage with red-flag detection and nearest-facility routing' },
+      { src: '/assets/deepdive/healthcare/dd-shifa-2.jpg', w: 5120, h: 3200, caption: 'Clinician Copilot Summary — cross-provider patient view with care gaps, recommendations, and medication adherence flags' }
     ],
     phases: [
       { name: 'Phase 1 · Grounding', status: 'PROPOSED', detail: 'RAG architecture over HIE records with per-answer source citations.' },
@@ -725,9 +725,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'MONAI', role: 'Deep learning framework for medical data — powering the organ-system health scores that drive the twin\'s risk timeline and metabolic alerts.', url: 'https://monai.io/' }
     ],
     shots: [
-      { src: 'assets/deepdive/healthcare/v6-cat-healthtwin.jpg', w: 1600, h: 1000, caption: 'Virtual Human Twin — personal digital-twin health model and risk timeline' },
-      { src: 'assets/deepdive/healthcare/dd-healthtwin-1.jpg', w: 5120, h: 3200, caption: 'Health Twin — full-body visualization with organ-system scores and health risk timeline with biomarker trajectories' },
-      { src: 'assets/deepdive/healthcare/dd-healthtwin-2.jpg', w: 5120, h: 3200, caption: 'AI Health Coach — daily action dashboard with sleep, movement, nutrition tracking and progress rings' }
+      { src: '/assets/deepdive/healthcare/v6-cat-healthtwin.jpg', w: 1600, h: 1000, caption: 'Virtual Human Twin — personal digital-twin health model and risk timeline' },
+      { src: '/assets/deepdive/healthcare/dd-healthtwin-1.jpg', w: 5120, h: 3200, caption: 'Health Twin — full-body visualization with organ-system scores and health risk timeline with biomarker trajectories' },
+      { src: '/assets/deepdive/healthcare/dd-healthtwin-2.jpg', w: 5120, h: 3200, caption: 'AI Health Coach — daily action dashboard with sleep, movement, nutrition tracking and progress rings' }
     ],
     phases: [
       { name: 'Phase 1 · Ingest', status: 'PROPOSED', detail: 'Wearable streams, lab panels, and health records unified into the twin model.' },
@@ -750,9 +750,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioMedical AI-Q Research Agent', role: 'AI-powered epidemiological reasoning — connecting case demographics, lab results, travel history, and exposure data to accelerate outbreak pattern detection.', url: 'https://build.nvidia.com/nvidia/biomedical-aiq-research-agent' }
     ],
     shots: [
-      { src: 'assets/deepdive/healthcare/v6-cat-tableegh.jpg', w: 1600, h: 1000, caption: 'Tableegh — disease surveillance and outbreak-investigation platform' },
-      { src: 'assets/deepdive/healthcare/dd-tableegh-1.jpg', w: 5120, h: 3200, caption: 'Tableegh Disease Notification — dashboard with case counts and Emirates ID patient lookup with demographics auto-fill' },
-      { src: 'assets/deepdive/healthcare/dd-tableegh-2.jpg', w: 5120, h: 3200, caption: 'Epidemiological Investigation — structured symptom, laboratory, travel history, and exposure data capture per case' }
+      { src: '/assets/deepdive/healthcare/v6-cat-tableegh.jpg', w: 1600, h: 1000, caption: 'Tableegh — disease surveillance and outbreak-investigation platform' },
+      { src: '/assets/deepdive/healthcare/dd-tableegh-1.jpg', w: 5120, h: 3200, caption: 'Tableegh Disease Notification — dashboard with case counts and Emirates ID patient lookup with demographics auto-fill' },
+      { src: '/assets/deepdive/healthcare/dd-tableegh-2.jpg', w: 5120, h: 3200, caption: 'Epidemiological Investigation — structured symptom, laboratory, travel history, and exposure data capture per case' }
     ],
     modules: [{
       num: '01', name: 'Tableegh Disease Surveillance', status: 'PROPOSED',
@@ -769,9 +769,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioMedical AI-Q Research Agent', role: 'Privacy-preserving AI workflows over Malaffi\'s HIE data — identifying care gaps from cross-provider records and generating prioritised clinic worklists.', url: 'https://build.nvidia.com/nvidia/biomedical-aiq-research-agent' }
     ],
     shots: [
-      { src: 'assets/deepdive/malaffi/v6-cat-malaffi-gaps.jpg', w: 1600, h: 1000, caption: 'Care-Gap Worklists — panel-management dashboard over Malaffi HIE data' },
-      { src: 'assets/deepdive/malaffi/dd-caregaps-1.jpg', w: 5120, h: 3200, caption: 'Care-Gap Worklists — clinic worklist with per-patient risk scores, open gaps, overdue count, and outreach actions' },
-      { src: 'assets/deepdive/malaffi/dd-caregaps-2.jpg', w: 5120, h: 3200, caption: 'Care-Gap Closure Tracking — pipeline view (outreach to appointment to completed) with per-patient status' }
+      { src: '/assets/deepdive/malaffi/v6-cat-malaffi-gaps.jpg', w: 1600, h: 1000, caption: 'Care-Gap Worklists — panel-management dashboard over Malaffi HIE data' },
+      { src: '/assets/deepdive/malaffi/dd-caregaps-1.jpg', w: 5120, h: 3200, caption: 'Care-Gap Worklists — clinic worklist with per-patient risk scores, open gaps, overdue count, and outreach actions' },
+      { src: '/assets/deepdive/malaffi/dd-caregaps-2.jpg', w: 5120, h: 3200, caption: 'Care-Gap Closure Tracking — pipeline view (outreach to appointment to completed) with per-patient status' }
     ],
     phases: [
       { name: 'Phase 1 · Rules', status: 'PROPOSED', detail: 'Join existing risk scores with registry care-gap rules into per-clinic panels.' },
@@ -795,9 +795,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'BioNeMo', role: 'AI platform for drug-gene interaction modeling — powering the sealed-data design where prescribing alerts fire without exposing the raw genomic report.', url: 'https://github.com/NVIDIA-BioNeMo' }
     ],
     shots: [
-      { src: 'assets/deepdive/malaffi/v6-cat-malaffi-pgx.jpg', w: 1600, h: 1000, caption: 'PGx Rx Guard — pharmacogenomic prescribing-alert dashboard' },
-      { src: 'assets/deepdive/malaffi/dd-pgx-1.jpg', w: 5120, h: 3200, caption: 'PGx Rx Guard — e-prescribing CYP2C19 interaction alert with metaboliser status, recommended dose, and accept/override actions' },
-      { src: 'assets/deepdive/malaffi/dd-pgx-2.jpg', w: 5120, h: 3200, caption: 'PGx Alert Analytics — drug-class acceptance rates with per-class breakdown bars' }
+      { src: '/assets/deepdive/malaffi/v6-cat-malaffi-pgx.jpg', w: 1600, h: 1000, caption: 'PGx Rx Guard — pharmacogenomic prescribing-alert dashboard' },
+      { src: '/assets/deepdive/malaffi/dd-pgx-1.jpg', w: 5120, h: 3200, caption: 'PGx Rx Guard — e-prescribing CYP2C19 interaction alert with metaboliser status, recommended dose, and accept/override actions' },
+      { src: '/assets/deepdive/malaffi/dd-pgx-2.jpg', w: 5120, h: 3200, caption: 'PGx Alert Analytics — drug-class acceptance rates with per-class breakdown bars' }
     ],
     phases: [
       { name: 'Phase 1 · Rules base', status: 'PROPOSED', detail: 'Structure PGx reports into a drug-gene interaction rules base.' },
@@ -820,9 +820,9 @@ export const PORTFOLIO_DEEPDIVE: Record<string, any> = {
       { platform: 'Ambient Healthcare Agents', role: 'Patient-facing AI agent powering the companion app\'s bilingual assistant — personalized health navigation, plain-language record explanations, and appointment guidance.', url: 'https://build.nvidia.com/nvidia/ambient-healthcare-agents' }
     ],
     shots: [
-      { src: 'assets/deepdive/malaffi/v6-cat-malaffi-patient.jpg', w: 1600, h: 1000, caption: 'Patient Companion — unified personal health record and access-transparency app' },
-      { src: 'assets/deepdive/malaffi/dd-mpatient-1.jpg', w: 5120, h: 3200, caption: 'Malaffi Patient Companion — personalized home with AI assistant and My Health Record cards' },
-      { src: 'assets/deepdive/malaffi/dd-mpatient-2.jpg', w: 5120, h: 3200, caption: 'Record Access Transparency — timestamped log of every facility and provider who viewed the patient record' }
+      { src: '/assets/deepdive/malaffi/v6-cat-malaffi-patient.jpg', w: 1600, h: 1000, caption: 'Patient Companion — unified personal health record and access-transparency app' },
+      { src: '/assets/deepdive/malaffi/dd-mpatient-1.jpg', w: 5120, h: 3200, caption: 'Malaffi Patient Companion — personalized home with AI assistant and My Health Record cards' },
+      { src: '/assets/deepdive/malaffi/dd-mpatient-2.jpg', w: 5120, h: 3200, caption: 'Record Access Transparency — timestamped log of every facility and provider who viewed the patient record' }
     ],
     phases: [
       { name: 'Phase 1 · Identity', status: 'PROPOSED', detail: 'UAE Pass binding to the Malaffi master patient index.' },

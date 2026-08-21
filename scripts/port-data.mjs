@@ -32,6 +32,11 @@ const MODULES = [
 for (const mod of MODULES) {
   let src = readFileSync(join(srcDir, mod.file), 'utf8')
 
+  // The prototype loads screenshots relative to its own file. Served from
+  // Next's /public they must be root-absolute, or they resolve against
+  // whatever route happens to be current.
+  src = src.replace(/(["'(=])assets\//g, '$1/assets/')
+
   // Drop the trailing merge IIFE — the merge now lives in src/data/index.ts.
   src = src.replace(/\n\(function \(\) \{[\s\S]*?\}\)\(\);\s*$/, '\n')
 
