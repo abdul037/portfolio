@@ -41,6 +41,14 @@ const lines = raw
   // names, so the design's literal families resolve through CSS variables.
   .replace(/'Space Grotesk'/g, 'var(--font-space-grotesk)')
   .replace(/'IBM Plex Mono'/g, 'var(--font-ibm-plex-mono)')
+  // Wording overrides: the "What I Build" grid shows real shipped products, so
+  // it should not be labelled with the design's "case study" catch-all (that
+  // stays on the genuine concept case studies below). See also globals.css
+  // (.pf-hero::after "View build").
+  .replace('Click any item to open its full case study', 'Click any item to open its full breakdown')
+  // Only the status-panel display label; the window.PORTFOLIO_* references live
+  // in the logic class the converter never reads.
+  .replace('>PORTFOLIO</span>', '>PRODUCTS</span>')
   .split('\n')
 
 /** 1-based, inclusive line ranges lifted from the prototype's section comments. */

@@ -26,7 +26,7 @@ export function HomeWork({ v }: { v: ViewModel }) {
             </p>
             <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginTop: "14px", fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--a,#34d399)" }}>
               <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--a,#34d399)", boxShadow: "0 0 8px var(--a,#34d399)", animation: "pulseDot 2s infinite" }} />
-              Click any item to open its full case study
+              Click any item to open its full breakdown
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "14px" }}>
@@ -42,7 +42,7 @@ export function HomeWork({ v }: { v: ViewModel }) {
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "6px", borderLeft: "1px solid rgba(255,255,255,0.06)", paddingLeft: "18px" }}>
                 <span style={{ color: "rgba(var(--aRGB,52,211,153),0.5)", letterSpacing: "0.14em" }}>
-                  PORTFOLIO
+                  PRODUCTS
                 </span>
                 <span style={{ color: "#f0f0f4" }}>
                   28 BUILDS

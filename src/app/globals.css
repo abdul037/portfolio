@@ -156,7 +156,7 @@ body { overflow-x: clip; }
 
 .pf-hero { position: relative; }
 .pf-hero::after {
-  content: 'View case study \2192';
+  content: 'View build \2192';
   display: block;
   margin-top: 11px;
   font-family: var(--font-mono);
