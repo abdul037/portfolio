@@ -73,5 +73,8 @@
   "execintel/IndustrySummary.jpg": [
     [0.196, 0.230, 0.342, 0.392],
     [0.552, 0.215, 0.902, 0.402]
+  ],
+  "deepdive/crm/dd-crmcopilot-1.jpg": [
+    [0.045, 0.295, 0.400, 0.400]
   ]
 }

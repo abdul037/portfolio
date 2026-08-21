@@ -30,7 +30,7 @@ export function HomeContact({ v }: { v: ViewModel }) {
               <a href="https://www.linkedin.com/in/abdul-muwahib" target="_blank" rel="noopener" data-magnetic="1" style={{ display: "inline-block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)", color: "#e0e0e6", fontSize: "15px", fontWeight: "500", padding: "14px 28px", borderRadius: "10px", transition: "border-color 0.2s" }} className="hv-23">
                 LinkedIn
               </a>
-              <a href="https://github.com/abdulmuwahib" target="_blank" rel="noopener" data-magnetic="1" style={{ display: "inline-block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)", color: "#e0e0e6", fontSize: "15px", fontWeight: "500", padding: "14px 28px", borderRadius: "10px", transition: "border-color 0.2s" }} className="hv-23">
+              <a href="https://github.com/abdul037" target="_blank" rel="noopener" data-magnetic="1" style={{ display: "inline-block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)", color: "#e0e0e6", fontSize: "15px", fontWeight: "500", padding: "14px 28px", borderRadius: "10px", transition: "border-color 0.2s" }} className="hv-23">
                 GitHub
               </a>
               <button type="button" onClick={v.openResume} data-magnetic="1" style={{ display: "inline-block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.12)", color: "#e0e0e6", fontFamily: "var(--font-space-grotesk), system-ui, sans-serif", fontSize: "15px", fontWeight: "500", padding: "14px 28px", borderRadius: "10px", cursor: "pointer", transition: "border-color 0.2s" }} className="hv-24">

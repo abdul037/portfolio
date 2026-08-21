@@ -523,10 +523,7 @@ export function HomeWork({ v }: { v: ViewModel }) {
             <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#22d3ee" }}>
               Product Case Studies
             </span>
-            <a href="Interview%20Prep%20Sheet.dc.html" style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#22d3ee", marginLeft: "auto", textDecoration: "none", border: "1px solid rgba(34,211,238,0.25)", borderRadius: "5px", padding: "4px 10px", transition: "all 0.2s" }} className="hv-12">
-              Case Study Playbook &#8599;
-            </a>
-            <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#63636d" }}>
+            <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#63636d", marginLeft: "auto" }}>
               Concepts &amp; improvement proposals by industry
             </span>
           </div>

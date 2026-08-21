@@ -18,10 +18,7 @@ export function HomeTeardowns({ v }: { v: ViewModel }) {
             <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "10px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#818cf8" }}>
               GCC Product Teardowns
             </span>
-            <a href="Product%20Studies%20Cheat%20Sheet.dc.html" style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#818cf8", marginLeft: "auto", textDecoration: "none", border: "1px solid rgba(129,140,248,0.25)", borderRadius: "5px", padding: "4px 10px", transition: "all 0.2s" }} className="hv-16">
-              Teardown Playbook &#8599;
-            </a>
-            <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#63636d" }}>
+            <span style={{ fontFamily: "var(--font-ibm-plex-mono), monospace", fontSize: "9px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#63636d", marginLeft: "auto" }}>
               What they built &amp; what I&rsquo;d improve
             </span>
           </div>

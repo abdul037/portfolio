@@ -41,13 +41,6 @@ export function HomeHero({ v }: { v: ViewModel }) {
               <button type="button" onClick={v.viewPortfolio} data-magnetic="1" style={{ background: "linear-gradient(135deg, var(--a,#34d399), #2dd4bf)", color: "#07070e", fontFamily: "var(--font-space-grotesk), system-ui, sans-serif", fontSize: "15px", fontWeight: "600", padding: "16px 34px", borderRadius: "12px", border: "none", cursor: "pointer", boxShadow: "0 8px 32px rgba(var(--aRGB,52,211,153),0.4)", transition: "all 0.3s" }} className="hv-3">
                 View Portfolio
               </button>
-              <button type="button" onClick={v.openResume} data-magnetic="1" style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.12)", color: "#e0e0e6", fontFamily: "var(--font-space-grotesk), system-ui, sans-serif", fontSize: "15px", fontWeight: "500", padding: "16px 30px", borderRadius: "12px", cursor: "pointer", transition: "all 0.3s", backdropFilter: "blur(8px)" }} className="hv-4">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                </svg>
-                 View Resume 
-              </button>
             </div>
             <div data-reveal="1" data-delay="2" style={{ display: "flex", gap: "28px", marginTop: "48px", flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: "7px" }}>
